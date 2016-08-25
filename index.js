@@ -21,6 +21,9 @@ function replicate(event, callback) {
             agent: streambot.agent
         }
     };
+
+    console.log(replicaConfig);
+
     if (process.env.ReplicaEndpoint) replicaConfig.endpoint = process.env.ReplicaEndpoint;
     var replica = new Dyno(replicaConfig);
 
